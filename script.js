@@ -103,12 +103,12 @@ function playRound(e,getComputerChoice){
 
         let scores=document.createElement("li");
         list.appendChild(scores);
-    scores.innerHTML="<div> <h1>"+`${userChoice} and ${choice}`+"</h1>";
+    scores.innerHTML="<div id='announce'> <h3>"+`${userChoice} and ${choice}`+"</h3> </div>";
         
     let winner;
                if(userScore==5){
                winner="User";
-                scores.innerHTML+=`Winner is :${winner}`
+                scores.innerHTML+="<h1>"+`Winner is :${winner}`+"</h1> "
                     rockbtn.disabled = true;
     paperbtn.disabled = true;
     scibtn.disabled = true;
