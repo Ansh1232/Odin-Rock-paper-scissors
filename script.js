@@ -100,8 +100,15 @@ function playRound(e,getComputerChoice){
             console.log("You Scored!");
         console.log(`Computer Chose:${choice} You Chose:${userChoice}`);
         }
+
+        let scores=document.createElement("li");
+        list.appendChild(scores);
+    scores.innerHTML="<div> <h1>"+`${userChoice} and ${choice}`+"</h1>";
+        
+    let winner;
                if(userScore==5){
-                console.log("You won");
+               winner="User";
+                scores.innerHTML+=`Winner is :${winner}`
                     rockbtn.disabled = true;
     paperbtn.disabled = true;
     scibtn.disabled = true;
@@ -112,7 +119,8 @@ function playRound(e,getComputerChoice){
 
             }
             if(computerScore==5){
-                console.log("Computer won");
+              winner="Computer";
+              scores.innerHTML+=`Winner is : ${winner}`
                     rockbtn.disabled = true;
     paperbtn.disabled = true;
     scibtn.disabled = true;
@@ -121,10 +129,12 @@ function playRound(e,getComputerChoice){
                 return;
             }
 
-        let scores=document.createElement("li");
-    scores.textContent=`${userChoice} and ${choice}`;
+    
+    
 
-    list.appendChild(scores);
+    
+
+  
 
 }
 
